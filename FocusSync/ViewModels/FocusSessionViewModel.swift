@@ -17,6 +17,10 @@ class FocusSessionViewModel: ObservableObject {
         sessions.append(newSession)
     }
     
+    func addNewSession(_ session: FocusSession) {
+        sessions.append(session)
+    }
+    
     func deleteSession(at offsets: IndexSet) {
         sessions.remove(atOffsets: offsets)
     }
@@ -27,6 +31,12 @@ class FocusSessionViewModel: ObservableObject {
     
     func endSession(_ session: FocusSession) {
         
+    }
+    
+    func removeAllSessions() {
+        #if DEBUG
+        sessions.removeAll()
+        #endif
     }
 }
 
