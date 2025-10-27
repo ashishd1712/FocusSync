@@ -11,7 +11,7 @@ import SwiftUI
 struct FocusSyncApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FocusSessionListView()
         }
     }
 }
